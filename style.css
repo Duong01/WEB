@@ -16,7 +16,7 @@ span{
     width: 500px;
     height: 500px;
     font-weight:bold;
-    animation: rotate 100s infinite linear;
+    animation: rotate 30s infinite linear;
     text-shadow: 5px -4px aqua;
     border-radius: 800px;
     line-height: 400px;
