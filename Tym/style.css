@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: Beige;
+    align-items: center;
+    
+}
+.aline_center{
+    min-width: 200px;
+    min-height: 200px;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: pink;
+    border-style: none;
+    border-radius: 40px;
+    animation: animate 3s infinite;
+    margin: -150px -100px;
+}
+
+@keyframes animate {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(.8);
+    }
+    60% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+.aline_center button{
+    border-color: beige;
+    border-style: none;
+}
+.aline_center img{
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
+    border-style: none;
+}
