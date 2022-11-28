@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <style>
+        body{
+            background: #000;
+            
+        }
+        p{
+            align-items: center;
+            color:brown;
+            text-align: center;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 70px;
+            font-size: 20px;
+            animation: mau .5s infinite;
+
+        }
+        .image{
+            width: 300px;
+            height: 300px;
+            align-items: center;
+            min-height: auto;
+            min-width: auto;
+            display: inline-block;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            object-fit: cover;
+        }
+        .image img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+            object-fit: cover;
+            
+            
+        }
+        @keyframes mau{
+            0%{
+                color: violet;
+
+            }
+            25%{
+                color: rgb(214, 16, 138);
+            }
+            50%{
+                color: red;
+            }
+            100%{
+                color: black;
+            }
+        }
+        audio{
+            width: 1px;
+            height: 1px;
+            opacity: initial;
+        }
+        @keyframes move{
+            0%{
+                opacity: 0;
+                transform: translateY(0);
+            }
+            10%{
+                opacity: 1;
+            }
+            90%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+                transform: translateY(50vh);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <div class="slide">
+        <p>COMBO SLIDE </p>
+    </div>
+    <div class="image">
+        <img id="img" onclick="change()" src="./img/anh.jpg" alt="" >
+    </div>   
+        <audio controls autoplay>
+            <source src="./Tình Ka Ngọt Ngào (RIN Music Remix) - Lập Nguyên, Yến Nồi Cơm Điện - Bài hát, lyrics.mp3">
+        </audio>
+    <script>
+        var index=0;
+        setInterval( function change (){
+            var imgs=["img/anh.jpg","img/anh1.jpg","img/anh2.jpg","img/anh3.jpg","img/anh4.jpg","img/anh5.jpg"
+            ,"img/anh6.jpg","img/anh7.jpg","img/anh8.jpg","img/anh9.jpg","img/anh10.jpg"];
+            document.getElementById("img").src=imgs[index];
+            index++;
+            if(index==11){
+                index=0;
+            }
+            
+        },2000);
+    </script>
+    <script src="./slide.js">
+    </script>
+</body>
+</html>
