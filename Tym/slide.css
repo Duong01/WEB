@@ -50,6 +50,8 @@ audio{
     width: 1px;
     height: 1px;
     opacity: initial;
+    position: absolute;
+    right: 0;
 }
 .box div span::before{
     content: "";
