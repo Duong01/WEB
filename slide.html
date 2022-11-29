@@ -7,7 +7,7 @@
     <title>Slide</title>
     <style>
         body{
-            background: pink;
+            background: #000;
             
         }
         p{
@@ -16,7 +16,7 @@
             text-align: center;
             font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             margin: 70px;
-            font-size: 30px;
+            font-size: 20px;
             animation: mau .5s infinite;
 
         }
@@ -60,36 +60,54 @@
         audio{
             width: 1px;
             height: 1px;
-            color: black;
+            opacity: initial;
+        }
+        @keyframes move{
+            0%{
+                opacity: 0;
+                transform: translateY(0);
+            }
+            10%{
+                opacity: 1;
+            }
+            90%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+                transform: translateY(50vh);
+            }
         }
     </style>
 </head>
 
 <body>
+    <div id="container"></div>
+
     <div class="slide">
         <p>COMBO SLIDE </p>
     </div>
     <div class="image">
         <img id="img" onclick="change()" src="./img/anh.jpg" alt="" >
-    </div>
-    <audio controls autoplay>
+    </div>   
         <audio controls autoplay>
-            <source src="./Tình Ka Ngọt Ngào - Lập Nguyên, Yến Nồi Cơm Điện - Bài hát, lyrics.mp3">
+            <source src="./Tình Ka Ngọt Ngào (RIN Music Remix) - Lập Nguyên, Yến Nồi Cơm Điện - Bài hát, lyrics.mp3">
         </audio>
-
-    </audio>
     <script>
         var index=0;
         setInterval( function change (){
             var imgs=["img/anh.jpg","img/anh1.jpg","img/anh2.jpg","img/anh3.jpg","img/anh4.jpg","img/anh5.jpg"
-            ,"img/anh6.jpg","img/anh7.jpg","img/anh8.jpg","img/anh9.jpg","img/anh10.jpg"];
+            ,"img/anh6.jpg","img/anh7.jpg","img/anh8.jpg","img/anh9.jpg","img/anh10.jpg","img/anh11.jpg"
+            ,"img/anh12.jpg","img/anh13.jpg","img/anh14.jpg","img/anh15.jpg","img/anh16.jpg","img/anh17.jpg"];
             document.getElementById("img").src=imgs[index];
             index++;
-            if(index==11){
+            if(index==18){
                 index=0;
             }
             
         },2000);
+    </script>
+    <script src="./slide.js">
     </script>
 </body>
 </html>

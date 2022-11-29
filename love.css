@@ -31,11 +31,12 @@ audio {
 }
 p{
   color: #fff;
-  font-size: 50px;
-  margin: -191px 115px;
+  font-size: 40px;
+  margin: -196px -39px;
   animation: mau .5s infinite;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 img{
   width: 200px;
   height: 200px;
@@ -44,7 +45,7 @@ img{
 }
  
 button{
-  background: rgba(0,0,0,0.5); ;
+  background: rgba(0,0,0,0.5); 
 }
 @keyframes mau{
   0%{
