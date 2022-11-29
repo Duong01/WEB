@@ -51,7 +51,7 @@ audio{
     height: 1px;
     opacity: initial;
     position: absolute;
-    top: 5;
+    top: 2;
 }
 .box div span::before{
     content: "";
