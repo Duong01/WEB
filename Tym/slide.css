@@ -103,3 +103,19 @@ audio{
     filter: blur(2px);
     box-shadow: 0 0 120px #fff;
 }
+@keyframes move{
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(50vh);
+    }
+}
