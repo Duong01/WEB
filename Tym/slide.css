@@ -46,6 +46,11 @@ body{
         transform:rotateX(-30deg) rotateY(360deg);
     }
 }
+audio{
+    width: 1px;
+    height: 1px;
+    opacity: initial;
+}
 .box div span::before{
     content: "";
     position: absolute;
