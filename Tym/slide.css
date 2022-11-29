@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color:#050505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation:ani1 8s linear infinite;
+}
+.box div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+.box div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+    overflow: hidden;
+}
+.box :hover span{
+    transform:  rotateY(calc(90deg * var(--i))) translateZ(180px);
+}
+@keyframes ani1{
+    0%{
+        transform:rotateX(-30deg) rotateY(0);
+    }
+    100%{
+        transform:rotateX(-30deg) rotateY(360deg);
+    }
+}
+.box div span::before{
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 160%;
+    height: 160%;
+    background-image: linear-gradient(90deg, #00ccff,
+    #f008f0,#ecf008,#46f008);
+    animation:ani2 5s linear infinite;
+    z-index: -1;
+}
+@keyframes ani2{
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.box div span img{
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    padding: 6px;
+}
+.box div.top{
+    position: absolute;
+    top: -150px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/anh5.jpg');
+    background-position: center top;
+    background-size: cover;
+    transform: rotateZ(85deg) rotateY(90deg) rotateX(-5deg); 
+}
+.box div.bottom{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/anh6.jpg');
+    background-position: center top;
+    background-size: cover;
+    transform: rotateZ(85deg) rotateY(90deg) rotateX(-5deg); 
+    filter: blur(2px);
+    box-shadow: 0 0 120px #fff;
+}
