@@ -96,7 +96,7 @@ audio{
     left: 0;
     height: 100%;
     width: 100%;
-    background-image: url('img/anh6.jpg');
+    background-image: url('img/anh1.jpg');
     background-position: center top;
     background-size: cover;
     transform: rotateZ(85deg) rotateY(90deg) rotateX(-5deg); 
